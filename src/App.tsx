@@ -21,7 +21,7 @@ const App = () => {
 
         <ul>
           {list.map((item, index) => (
-            <ListItem/>
+            <ListItem key={index} item={item} />
           ))}
         </ul>
 
