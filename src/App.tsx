@@ -11,6 +11,16 @@ const App = () => {
     { id: 2, name: "ablublebe", done: false},
   ])
 
+  const handleAddTask = (taskName: string) => {
+    let newList = [...list]
+    newList.push({
+      id: list.length + 1,
+      name: taskName,
+      done: false
+    })
+    setList(newList)
+  }
+
   return(
     <C.Container>
       <C.Area>
@@ -18,7 +28,7 @@ const App = () => {
           Lista de Tarefas
         </C.Header>
 
-        <AddArea/>
+        <AddArea onEnter={handleAddTask}/>
 
         <ul>
           {list.map((item, index) => (
