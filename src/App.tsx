@@ -18,7 +18,7 @@ const App = () => {
           Lista de Tarefas
         </C.Header>
 
-        {/* Comentário */}
+        <AddArea/>
 
         <ul>
           {list.map((item, index) => (
